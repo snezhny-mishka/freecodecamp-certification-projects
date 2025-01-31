@@ -1,0 +1,93 @@
+:root {
+    --background: #061F52;
+    --display: #335DB4;
+    --input-field: #021335;
+    --button: #DA6C17;
+    --border: #FCFCFF;
+    --alert1: #F34D52;
+    --alert2: #AE0C11;
+
+}
+
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Hedvig Letters Serif", serif;
+  }
+
+body {
+    background-color: var(--background);
+}  
+
+h1 {
+    padding-bottom: 2rem;
+    color: var(--border);
+}  
+
+label {
+    color: var(--border);
+}
+
+
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-display {
+    border: 2px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    height: 12rem;
+    width: 30rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-color: var(--display);
+
+}
+
+#number {
+    height: 2rem;
+    width: 14rem;
+    background-color: var(--input-field);
+    border: 2px solid var(--border);
+    color: white;
+}
+
+#convert-btn {
+    height: 2rem;
+    width: 14rem;
+    background-color: var(--button);
+    color: black;
+}
+
+#output {
+    background-color: var(--input-field);
+    color: white;
+    width: 30rem;
+    line-height: 3rem;
+    text-align: center;
+    margin-top: 2rem;
+    border: 2px solid var(--border);
+
+}
+
+.hidden {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
