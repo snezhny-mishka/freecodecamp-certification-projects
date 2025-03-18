@@ -1,0 +1,130 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    background-color: rgb(3, 3, 61);
+}
+
+h1 {
+    color: white;
+}
+
+#cash {
+    height: 1.5rem;
+    width: 15rem;
+}
+
+#label-text {
+    color: white;
+    font-size: 1.2rem;
+}
+
+#purchase-btn {
+    padding: 0.5rem;
+    background-image: linear-gradient(90deg, rgb(250, 135, 28), rgb(236, 131, 32)) ;
+    font-weight: bold;
+}
+
+#change-due {
+    color: white;
+}
+
+#display {
+    width: 16rem;
+    height:3rem;
+    background-color:black;
+    border: solid 0.5rem rgb(115, 193, 238);
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#detail-for-display {
+    height: 2rem;
+    width: 4rem;
+    background-color: rgb(115, 193, 238);
+}
+
+#body-cash-register {
+    height: 18rem;
+    width: 24rem;
+    background-color: rgb(115, 193, 238);
+    border-radius: 2rem 2rem 0 0 ;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+
+#cash-in-drawer {
+    margin: 1rem;
+}
+
+
+#cash-available {
+    margin-top: 1.5rem;
+    height: 14rem;
+    width: 12rem;
+    background-color: aliceblue;
+}
+
+h3 {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+#circle {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: black;
+
+}
+
+#drawer {
+    background-color: rgb(115, 193, 238);
+    height: 3rem;
+    width: 26rem;
+    margin-top: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    background-color: black;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.buttons-container {
+    margin-top: 2rem;
+    border: solid 2px rgb(115, 193, 238);
+    width: 6rem;
+    height: 6rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#cash-register {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
