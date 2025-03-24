@@ -1,2 +1,2 @@
 # freecodecamp-certification-projects
-The projects I did to get freeCodeCamp certifications.
+The projects I've done to get freeCodeCamp certifications.
