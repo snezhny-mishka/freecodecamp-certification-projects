@@ -2,7 +2,6 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 body {
@@ -12,7 +11,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-
     background-color: rgb(3, 3, 61);
 }
 
@@ -71,7 +69,6 @@ h1 {
     margin: 1rem;
 }
 
-
 #cash-available {
     margin-top: 1.5rem;
     height: 14rem;
@@ -89,7 +86,6 @@ h3 {
     width: 1.5rem;
     border-radius: 50%;
     background-color: black;
-
 }
 
 #drawer {
@@ -97,7 +93,6 @@ h3 {
     height: 3rem;
     width: 26rem;
     margin-top: 1rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,7 +110,6 @@ h3 {
     border: solid 2px rgb(115, 193, 238);
     width: 6rem;
     height: 6rem;
-
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

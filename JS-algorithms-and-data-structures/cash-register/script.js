@@ -1,9 +1,7 @@
-// DATA
-
-const cash = document.getElementById("cash"); //user input
-const changeDue = document.getElementById("change-due"); //where the change will appear
-const purchaseButton = document.getElementById("purchase-btn"); //button
-const cashInDrawer = document.getElementById("cash-in-drawer"); //shows the remaining cash
+const cash = document.getElementById("cash");
+const changeDue = document.getElementById("change-due");
+const purchaseButton = document.getElementById("purchase-btn"); 
+const cashInDrawer = document.getElementById("cash-in-drawer");
 
 let cid = [
     ["PENNY", 1.01],
@@ -22,42 +20,32 @@ const valuesTitles = ["Pennies", "Nickels", "Dimes", "Quarters", "Ones", "Fives"
 
 let price = 1.87;
 
-// FUNCTIONS
-
 function countTheChangeBills(change, values, cidReversed) {
     let changeBills = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 
     for (let i = 0; i < values.length; i++) {
         let numberOfBills = 0;
         let valueOfBills = cidReversed[i][1];
-
         while (change >= values[i] && valueOfBills > 0) {
             valueOfBills = parseFloat((valueOfBills - values[i]).toFixed(2));
-
             change = parseFloat((change - values[i]).toFixed(2));
             numberOfBills++;
         };
-
         if (numberOfBills > 0) {
             changeBills[i] = parseFloat((values[i] * numberOfBills).toFixed(2));
         };
     };
-
     if (change > 0) {
         // insuf funds
         changeBills = [];
     }
-
     return changeBills;
 };
 
 function showMoneyInDrawer(cid, valuesTitles) {
     cashInDrawer.innerHTML = "";
-
     for (let i = 0; i < cid.length; i++) {
-        cashInDrawer.innerHTML += `
-      <p>${valuesTitles[i]}: $${cid[i][1]}</p>
-      `
+        cashInDrawer.innerHTML += `<p>${valuesTitles[i]}: $${cid[i][1]}</p>`;
     };
 };
 
@@ -80,12 +68,9 @@ function updateCid(changeBills, cidReversed) {
 function main() {
     let cashRecieved = Number(cash.value);
     let change = parseFloat((cashRecieved - price).toFixed(2));
-
     let moneyInDrawer = parseFloat((cid.reduce((acc, el) => acc + el[1], 0)).toFixed(2));
-
     let cidReversed = cid.toReversed();
 
-    
     // show the change
     if (cashRecieved < price) {
         alert("Customer does not have enough money to purchase the item");
@@ -95,29 +80,19 @@ function main() {
         changeDue.innerText = "Status: INSUFFICIENT_FUNDS";
     } else if (moneyInDrawer > change) {
         let changeBills = countTheChangeBills(change, values, cidReversed);
-
         if (changeBills.length === 0) {
             changeDue.innerText = "Status: INSUFFICIENT_FUNDS";
         } else {
             updateCid(changeBills, cidReversed);
-
             showState(`Status: OPEN\n`, changeBills, cidReversed);
         }
     } else if (change === moneyInDrawer) {
         let changeBills = countTheChangeBills(change, values, cidReversed);
-        
         updateCid(changeBills, cidReversed);
-
         showState(`Status: CLOSED\n`, changeBills, cidReversed);
     };
-
     // show what's left in the drawer
     showMoneyInDrawer(cid, valuesTitles);
 };
-
-// RUN
-
-// show the initial money in the drawer
 showMoneyInDrawer(cid, valuesTitles);
-
 purchaseButton.addEventListener("click", main);
