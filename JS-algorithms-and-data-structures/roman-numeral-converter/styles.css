@@ -9,28 +9,25 @@
 
 }
 
-
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Hedvig Letters Serif", serif;
-  }
+}
 
 body {
     background-color: var(--background);
-}  
+}
 
 h1 {
     padding-bottom: 2rem;
     color: var(--border);
-}  
+}
 
 label {
     color: var(--border);
 }
-
-
 
 .container {
     height: 100vh;
@@ -76,18 +73,8 @@ label {
     text-align: center;
     margin-top: 2rem;
     border: 2px solid var(--border);
-
 }
 
 .hidden {
     display: none;
 }
-
-
-
-
-
-
-
-
-
