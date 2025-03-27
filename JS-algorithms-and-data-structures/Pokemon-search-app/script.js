@@ -1,19 +1,13 @@
-
 const input = document.getElementById("search-input");
 const button = document.getElementById("search-button");
 const outputContainer = document.getElementById("output-container");
 const userInputForm = document.getElementById("user-input-container");
-
 const pokemonName = document.getElementById("pokemon-name");
 const pokemonId = document.getElementById("pokemon-id");
-
 const weight = document.getElementById("weight");
 const height = document.getElementById("height");
-
 const imageContainer = document.getElementById("img-container");
-
 const types = document.getElementById("types");
-
 const hp = document.getElementById("hp");
 const attack = document.getElementById("attack");
 const defense = document.getElementById("defense");
@@ -21,28 +15,17 @@ const specialAttack = document.getElementById("special-attack");
 const specialDefense = document.getElementById("special-defense");
 const speed = document.getElementById("speed");
 
-/* 
-    stats: {stat.name, base_stat}
-    (hp, attack, defence, special-attack, special-defence, speed)
-
-*/
-
 const fetchData = async () => {
-
    const userInput = input.value.toLowerCase();
-    
     try {
       const res = await fetch("https://pokeapi-proxy.freecodecamp.rocks/api/pokemon");
       const data = await res.json();
     pokemonUrl = findPokemonURL(data.results, userInput); 
     fetchPokemonInfo(); 
-
     } catch (err) {
         console.log(err);
-        
     }
   };
-
 
 const findPokemonURL = (arr, input) => {
     let pokemonUrl = "";
@@ -51,8 +34,7 @@ const findPokemonURL = (arr, input) => {
         if (input === name || Number(input) === id) {
             pokemonUrl = `${url}`;
         } 
-    })
-    // return pokemonUrl.replace("http", 'https');
+    });
     return pokemonUrl;
 }
 
@@ -62,7 +44,6 @@ const fetchPokemonInfo = async () => {
         const data = await res.json();
         displayData(data);
     } catch (err) {
-        // console.log(err);
         alert("Pokémon not found");
         clearData();
     }
@@ -84,7 +65,6 @@ const displayData = (data) => {
     specialDefense.innerText  = `${data.stats[4].base_stat}`;
     speed.innerText  = `${data.stats[5].base_stat}`;
 }
-
 
 const clearData = () => {
     pokemonName.innerText = "";
