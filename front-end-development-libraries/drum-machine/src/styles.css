@@ -1,0 +1,65 @@
+/* h1 {
+    color: red;
+} */
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  
+  #root {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #drum-machine {
+    background-color: #DAD6D6;
+    padding: 20px;
+    border: 4px solid #F4AC45;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #controls {
+    padding: 0 0 20px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  h3 {
+    width: 100px;
+    height: 35px;
+    padding: 5px;
+    background-color: #495159;
+    color: #DAD6D6;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  #power-button {
+    padding: 5px;
+    width: 40px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  #keyboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .drum-pad {
+    height: 40px;
+    width: 50px;
+    background-color: #92BFB1;
+    border: none;
+    border-radius: 5px;
+    filter: drop-shadow(3px 3px 2px grey);
+    
+  }
