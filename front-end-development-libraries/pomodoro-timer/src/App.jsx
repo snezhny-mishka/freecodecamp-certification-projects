@@ -91,20 +91,14 @@ function App() {
         } else {
           setTimeLeft(sessionDuration * 60);
           setIsSession(true);
-          // audio.pause();
         }
       }
     }
-  
-    // const interval = setInterval(() => {
-    //   setTimeLeft((timeleft) => timeleft - 1);
-    // }, 1000);
-  
+
     function startTimer(timerState) {
       return setInterval(() => {
         if (timerState) {
           setTimeLeft((timeleft) => timeleft - 1);
-          // timerType();
         }
       }, 1000);
     }
@@ -158,12 +152,10 @@ function App() {
         <h3>Break</h3>
         <div id="break-setting-container">
           <button id="break-increment" onClick={increase}>
-            {/* <i class="fa-solid fa-xl fa-arrow-up"></i> */}
             {arrowUp}
           </button>
           <div id="break-length">{breakDuration}</div>
           <button id="break-decrement" onClick={decrease}>
-            {/* <i class="fa-solid fa-xl fa-arrow-down"></i> */}
             {arrowDown}
           </button>
         </div>
@@ -177,12 +169,10 @@ function App() {
         <h3>Session</h3>
         <div id="session-setting-container">
           <button id="session-increment" onClick={increase}>
-            {/* <i class="fa-solid fa-xl fa-arrow-up"></i> */}
             {arrowUp}
           </button>
           <div id="session-length">{sessionDuration}</div>
           <button id="session-decrement" onClick={decrease}>
-            {/* <i class="fa-solid fa-xl fa-arrow-down"></i> */}
             {arrowDown}
           </button>
         </div>
@@ -203,11 +193,9 @@ function App() {
     return (
       <div id="controls-container">
         <button id="start_stop" onClick={handleTimerStarted}>
-          {/* <i class="fa-2x fa-solid fa-play"></i> <i class="fa-2x fa-solid fa-pause"></i> */}
           {playBtn}{pauseBtn}
         </button>
         <button id="reset" onClick={handleResetTimer}>
-          {/* <i class="fa-2x fa-solid fa-rotate"></i> */}
           {resetBtn}
         </button>
       </div>
